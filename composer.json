@@ -7,6 +7,6 @@
   "require": {
     "drupal/config_pages": "^2.0",
     "drupal/smtp": "^1.0@beta",
-    "field_group": "^1.0"
+    "field_group": "^3.0@beta"
   }
 }
