@@ -4,7 +4,7 @@ use Drupal\Core\Entity\EntityInterface;
 
 function bigbox_send_notification_entity_update(EntityInterface $entity) {
   $obj = Drupal::service('bigbox_send_notification');
-  if ($entity->bundle() === $obj->getOptions()['bundle'] && $entity->getEntityTypeId() === 'config_pages'){
+  if ($entity->bundle() === $obj->get_options()['bundle'] && $entity->getEntityTypeId() === 'config_pages'){
     $obj->change_smtp_settings($entity);
   }
 }
