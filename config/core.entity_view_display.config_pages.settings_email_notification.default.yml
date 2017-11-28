@@ -1,0 +1,37 @@
+uuid: 1eefcd2a-26ab-4c0f-b4d0-ee0223355652
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.settings_email_notification
+    - field.field.config_pages.settings_email_notification.field_email_from
+    - field.field.config_pages.settings_email_notification.field_email_password
+    - field.field.config_pages.settings_email_notification.field_email_to
+id: config_pages.settings_email_notification.default
+targetEntityType: config_pages
+bundle: settings_email_notification
+mode: default
+content:
+  field_email_from:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_email_password:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email_to:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

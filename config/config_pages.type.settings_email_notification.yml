@@ -1,0 +1,14 @@
+uuid: 28ae6390-ff63-4427-87b9-e9fe4b393d4c
+langcode: en
+status: true
+dependencies: {  }
+id: settings_email_notification
+label: 'Настройки Email для оповещений'
+context:
+  show_warning: 1
+  group:
+    language: 0
+menu:
+  path: /admin/content/settings_email_notification
+  weight: '2'
+  description: ''

@@ -1,0 +1,9 @@
+name: bigbox_send_notification
+type: module
+description: Send notification with smtp
+core: 8.x
+package: bigbox
+dependencies:
+ - config_pages
+ - smtp
+version: 1.0.0

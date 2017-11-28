@@ -1,0 +1,19 @@
+uuid: 4fc68b02-74b1-4a80-be36-51d857b99963
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.settings_email_notification
+    - field.storage.config_pages.field_email_to
+id: config_pages.settings_email_notification.field_email_to
+field_name: field_email_to
+entity_type: config_pages
+bundle: settings_email_notification
+label: E-mails
+description: 'Почты на которые будут отправляться сообщения '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

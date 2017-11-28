@@ -1,0 +1,69 @@
+uuid: 52f35e87-e689-4168-9136-8690bc301831
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.settings_email_notification
+    - field.field.config_pages.settings_email_notification.field_email_from
+    - field.field.config_pages.settings_email_notification.field_email_password
+    - field.field.config_pages.settings_email_notification.field_email_to
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_otpravka_pisem_s:
+      children:
+        - field_email_from
+        - field_email_password
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Отправка писем с'
+    group_otpravka_pisem_na:
+      children:
+        - field_email_to
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Отправка писем на'
+id: config_pages.settings_email_notification.default
+targetEntityType: config_pages
+bundle: settings_email_notification
+mode: default
+content:
+  field_email_from:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_email_password:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email_to:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+hidden:
+  label: true

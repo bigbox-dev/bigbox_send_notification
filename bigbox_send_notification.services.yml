@@ -1,0 +1,4 @@
+services:
+  bigbox_send_notification:
+    class: Drupal\bigbox_send_notification\BigboxSendNotificationClass
+
