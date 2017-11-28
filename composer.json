@@ -3,7 +3,7 @@
   "description": "Send notification with smtp",
   "minimum-stability": "dev",
   "type": "drupal-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "require": {
     "drupal/config_pages": "^2.0",
     "drupal/smtp": "^1.0@beta",
