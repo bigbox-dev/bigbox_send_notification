@@ -43,13 +43,18 @@ class BigboxSendNotificationClass {
       $config->set('smtp_username', $emails['email'])->save();
       $config->set('smtp_password', $emails['password'])->save();
   
+      // сохранение почты в конфиг друпала system.site
+      \Drupal::configFactory()->getEditable('system.site')->set('mail', $emails['email'])->save();
+      
       $recipients = [];
       foreach ($emails['emailsTo'] as $email){
         $recipients[] = $email['value'];
       }
       if (count($recipients) > 0){
         $config_contacts_form = \Drupal::entityTypeManager()->getStorage('contact_form')->load('contact_form');
-	if ($config_contacts_form) $config_contacts_form->set('recipients', $recipients)->save();
+	      if ($config_contacts_form){
+          $config_contacts_form->set('recipients', $recipients)->save();
+        }
       }
       
     }else{
@@ -58,3 +63,4 @@ class BigboxSendNotificationClass {
     }
   }
 }
+
